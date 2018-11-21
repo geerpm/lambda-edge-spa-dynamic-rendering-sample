@@ -45,7 +45,7 @@ module.exports.vrFixer = async (event, context, callback) => {
 
   // is html
   const suffix =
-    request.uri == null
+    request.uri == null || request.uri == "/"
       ? ""
       : request.uri
           .split("?")
